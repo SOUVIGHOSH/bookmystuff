@@ -1,16 +1,25 @@
-import { useState } from "react";
+import { useReducer } from "react";
 import data from "../../data/static.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import reducer from "../../reducer/reducer";
 
 const { bookables } = data;
 export default function BookablesPage() {
-  const [bookableIndex, setBookableIndex] = useState(0);
-  const [group, setGroup] = useState("Kit");
-  const [filteredBookables, setFilteredBookables] = useState(
-    bookables.filter((b) => b.group === group)
-  );
-  const [showDetails, setShowDetails] = useState(false);
+  const initialState = {
+    bookableIndex: 0,
+    group: "Kit",
+    filteredBookables: bookables.filter((b) => b.group === "Kit"),
+    showDetails: false,
+  };
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const { bookableIndex, group, filteredBookables, showDetails } = state;
+  // const [bookableIndex, setBookableIndex] = useState(0);
+  // const [group, setGroup] = useState("Kit");
+  // const [filteredBookables, setFilteredBookables] = useState(
+  //   bookables.filter((b) => b.group === group)
+  // );
+  // const [showDetails, setShowDetails] = useState(false);
   const weekdays = [
     "Sunday",
     "Monday",
@@ -21,13 +30,21 @@ export default function BookablesPage() {
     "Saturday",
   ];
   const onNext = () => {
-    setBookableIndex((prev) => (prev + 1) % filteredBookables.length);
+    dispatch({
+      type: "SET_NEXT_BOOKABLE_INDEX",
+    });
+    //setBookableIndex((prev) => (prev + 1) % filteredBookables.length);
   };
 
   const groupChangeHandler = (newValue) => {
-    setBookableIndex(0);
-    setGroup(newValue);
-    setFilteredBookables(bookables.filter((b) => b.group !== group));
+    dispatch({
+      type: "CHANGE_GROUP",
+      payload: { group: newValue },
+    });
+    // setBookableIndex(0);
+    // setGroup(newValue);
+    // setFilteredBookables(bookables.filter((b) => b.group !== group));
+    // setShowDetails(false);
   };
   return (
     <div className="bookables-container">
@@ -44,12 +61,17 @@ export default function BookablesPage() {
           <li
             key={id}
             className={id === bookableIndex ? "selected" : null}
-            onClick={() => setBookableIndex(id)}
+            onClick={() =>
+              dispatch({
+                type: "SET_BOOKABLE_INDEX",
+                payload: { id },
+              })
+            }
           >
             {b.title}
           </li>
         ))}
-        <li className="bookables-next" onClick={onNext}>
+        <li className="bookables-button" onClick={onNext}>
           <FontAwesomeIcon icon={faArrowRight} />
           <span>Next</span>
         </li>
@@ -60,10 +82,10 @@ export default function BookablesPage() {
           <div>
             <input
               type="checkbox"
-              value={showDetails}
+              checked={showDetails}
               name="showDetails"
               id="showDetails"
-              onChange={() => setShowDetails((prev) => !prev)}
+              onChange={() => dispatch({ type: "TOGGLE_SHOW_DETAILS" })}
             />
             <label for="showDetails">Show details</label>
           </div>

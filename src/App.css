@@ -72,13 +72,30 @@ ul.bookables {
   background-color: rgb(42, 42, 118);
   color: white;
 }
-.bookables > li.bookables-next {
+.bookables > li.bookables-button {
   width: 10vw;
   height: 5vh;
   background-color: rgb(33, 33, 182);
   border: 1px solid black;
   border-radius: 25px;
   color: white;
+}
+
+.bookables-button {
+  width: 10vw;
+  height: 5vh;
+  background-color: rgb(33, 33, 182);
+  border: 1px solid black;
+  border-radius: 25px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bookables-button span {
+  margin-left: 1rem;
 }
 
 .bookables > li.bookables-next > span {
@@ -141,4 +158,25 @@ ul.bookables {
   color: rgb(42, 42, 118);
   border-bottom: 2px solid rgb(42, 42, 118);
   margin-bottom: 10vh;
+}
+.bookings-container {
+  display: flex;
+}
+.weekpicker-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90vw;
+}
+.weekpicker-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.weekdetails {
+  margin-top: 1vh;
+  display: inline-block;
+  text-align: center;
 }

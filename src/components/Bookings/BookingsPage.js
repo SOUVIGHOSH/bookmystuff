@@ -1,7 +1,10 @@
+import Weekpicker from "./Weekpicker";
+
 export default function BookingsPage() {
   return (
-    <div>
+    <div className="bookings-container">
       <p>Bookings</p>
+      <Weekpicker />
     </div>
   );
 }
