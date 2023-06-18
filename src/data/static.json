@@ -1,0 +1,93 @@
+{
+  "bookables": [
+    {
+      "id": 1,
+      "group": "Rooms",
+      "title": "Games Room",
+      "notes": "Table tennis, table football, pinball, Please tidy up!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 2,
+      "group": "Rooms",
+      "title": "Meeting Room",
+      "notes": "Standup , board, team meetings, Please tidy up!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 3,
+      "group": "Rooms",
+      "title": "Lecture Hall",
+      "notes": "All hands around the corner, Please tidy up!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 4,
+      "group": "Rooms",
+      "title": "Lounge",
+      "notes": "chill, refresh, relax. Please tidy up!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 4,
+      "group": "Kit",
+      "title": "Projector",
+      "notes": "Please project your presentation!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    },
+    {
+      "id": 5,
+      "group": "Kit",
+      "title": "Wireless mics",
+      "notes": "Go wireless with your voice!",
+      "sessions": [0, 2, 4],
+      "days": [0, 2, 3, 4, 5, 6]
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Brivel Bariki",
+      "img": "brivel-bariki-photo.jpeg",
+      "title": "Envisioning Sculptor",
+      "notes": "Aliquam erat volutpat. Cras consequat quam sit amet erat pretium, ac finibus leo lobortis. Maecenas tempor mauris eu sem tempor porta. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum viverra quam nisl."
+    },
+    {
+      "id": 2,
+      "name": "Michael Dam",
+      "img": "michael-dam-photo.jpeg",
+      "title": "Lorem ipsum dolor sit amet.",
+      "notes": "Aliquam erat volutpat. Cras consequat quam sit amet erat pretium, ac finibus leo lobortis. Maecenas tempor mauris eu sem tempor porta. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum viverra quam nisl."
+    },
+    {
+      "id": 3,
+      "name": "Monika Sandiego",
+      "img": "monika-sandiego-photo.jpeg",
+      "title": "Lorem ipsum dolor sit amet.",
+      "notes": "Aliquam erat volutpat. Cras consequat quam sit amet erat pretium, ac finibus leo lobortis. Maecenas tempor mauris eu sem tempor porta. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum viverra quam nisl."
+    },
+    {
+      "id": 4,
+      "name": "Usman Yousaf",
+      "img": "usman-yousaf-photo.jpeg",
+      "title": "Lorem ipsum dolor sit amet.",
+      "notes": "Aliquam erat volutpat. Cras consequat quam sit amet erat pretium, ac finibus leo lobortis. Maecenas tempor mauris eu sem tempor porta. Aliquam erat volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum viverra quam nisl."
+    }
+  ],
+  "bookings": [],
+  "sessions": ["Breakfast", "Morning", "Lunch", "Afternoon", "Evening"],
+  "days": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ]
+}

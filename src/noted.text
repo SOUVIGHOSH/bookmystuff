@@ -1,0 +1,1 @@
+1. useState take a function which gets executed only once to calculate initial state, this is lazy evaluation
